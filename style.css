@@ -48,6 +48,7 @@ h1 {
     transform: translateY(0);
   }
 } 
+
 .typing {
   overflow: hidden;
   white-space: nowrap;
@@ -66,6 +67,7 @@ h1 {
 @keyframes blink {
   50% { border-color: transparent }
 } 
+
 .subtext {
   text-align: left;
   display: inline-block;
@@ -73,6 +75,7 @@ h1 {
   animation: fadeIn 2s ease-in forwards;
   animation-delay: 4s;
 } 
+
 body {
   cursor: url("cursor\ 2.gif"), auto;
 }
