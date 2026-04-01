@@ -5,17 +5,73 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* cursor */
-  cursor: url("cursor 2.png") 16 16, auto;
 }
 
-/* Container */
+/* 💖 MENU (TOP RIGHT) */
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Button */
+.menu-btn {
+  background: white;
+  color: rgb(22, 106, 134);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  transition: 0.3s;
+}
+
+/* Button hover */
+.menu-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Dropdown */
+.menu-content {
+  display: none;
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px;
+  border-radius: 15px;
+  min-width: 240px;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Links */
+.menu-content a {
+  display: block;
+  text-decoration: none;
+  color: rgb(22, 106, 134);
+  padding: 6px 0;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.menu-content a:hover {
+  padding-left: 5px;
+  color: #ffb6e6;
+}
+
+/* Show dropdown */
+.menu:hover .menu-content {
+  display: block;
+}
+
+/* 🌸 MAIN CONTAINER */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 2s ease-in;
 }
 
 /* Heading */
@@ -53,15 +109,11 @@ h1 {
   50% { border-color: transparent }
 }
 
-/* LEFT side text */
+/* ✨ LEFT SIDE TEXT */
 .subtext {
   position: absolute;
   left: 40px;
-  top: 55%;
-  transform: translateY(-50%);
-  opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
-  animation-delay: 1s;
+  top: 65%;
 }
 
 /* Curly text */
@@ -70,16 +122,4 @@ h1 {
   font-size: 1.3rem;
   color: white;
   margin: 4px 0;
-}
-
-/* Fade */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

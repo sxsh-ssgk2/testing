@@ -2,22 +2,47 @@
 <html>
 <head>
   <title>Welcome to My World~</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- 💖 TOP RIGHT MENU -->
+  <div class="menu">
+    <button class="menu-btn">✿ menu</button>
+    <div class="menu-content">
+      <a href="#">about me~</a>
+      <a href="#">likes / dislikes</a>
+      <a href="#">interests / hobbies / passions</a>
+      <a href="#">things to know before dating me</a>
+      <a href="#">what i look for (red & green flags)</a>
+      <a href="#">my red & green flags</a>
+    </div>
+  </div>
+
+  <!-- 🌸 MAIN CONTENT -->
   <div class="container">
     <h1 class="typing">Hello Sash, welcome~</h1>
+
     <div class="subtext">
       <p>This is a website created just for you!</p>
       <p>We're just getting started tehe~</p>
     </div>
   </div>
+
+  <!-- Typing Script -->
   <script>
-  const text = document.querySelector(".typing");
-  text.addEventListener("animationend", () => {
-    text.classList.add("finished");
-  });
-</script>
+    const text = document.querySelector(".typing");
+
+    text.addEventListener("animationend", () => {
+      text.classList.add("finished");
+    });
+  </script>
+
 </body>
 </html>
