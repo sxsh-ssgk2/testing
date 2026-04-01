@@ -5,11 +5,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: url("cursor 1.png"), auto;
 }
 
-/* Center container */
+/* Container (center + fade in) */
 .container {
   text-align: center;
+  animation: fadeIn 2s ease-in;
 }
 
 /* Heading (soft comfy font) */
@@ -17,13 +19,7 @@ h1 {
   font-family: 'Quicksand', sans-serif;
   font-size: 2.5rem;
   color: white;
-  margin-bottom: 10px;
-}
-
-/* Subtext alignment */
-.subtext {
-  text-align: left;
-  display: inline-block;
+  margin-bottom: 8px;
 }
 
 /* Curly aesthetic text */
@@ -32,12 +28,39 @@ h1 {
   font-size: 1.3rem;
   color: white;
   margin: 4px 0;
-} 
-.container {
-  text-align: center;
-  animation: fadeIn 2s ease-in;
 }
 
+/* Subtext (appears after typing) */
+.subtext {
+  text-align: left;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 1s;
+}
+
+/* Typing animation */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  display: inline-block;
+  width: 0;
+  animation: typing 3s steps(25, end) forwards, blink 0.7s infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 28ch }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -47,35 +70,4 @@ h1 {
     opacity: 1;
     transform: translateY(0);
   }
-} 
-
-.typing {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid white;
-  width: 0;
-  animation: typing 3s steps(40, end) forwards, blink 0.7s infinite;
-}
-
-/* typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* blinking cursor */
-@keyframes blink {
-  50% { border-color: transparent }
-} 
-
-.subtext {
-  text-align: left;
-  display: inline-block;
-  opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
-  animation-delay: 4s;
-} 
-
-body {
-  cursor: url("cursor\ 2.gif"), auto;
 }
