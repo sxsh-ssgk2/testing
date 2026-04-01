@@ -5,16 +5,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: url("cursor 1.png"), auto;
+  cursor: url("cursor.png") 16 16, auto;
 }
 
-/* Container (center + fade in) */
+/* Container */
 .container {
   text-align: center;
   animation: fadeIn 2s ease-in;
 }
 
-/* Heading (soft comfy font) */
+/* Heading */
 h1 {
   font-family: 'Quicksand', sans-serif;
   font-size: 2.5rem;
@@ -22,34 +22,23 @@ h1 {
   margin-bottom: 8px;
 }
 
-/* Curly aesthetic text */
-.subtext p {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.3rem;
-  color: white;
-  margin: 4px 0;
-}
-
-/* Subtext (appears after typing) */
-.subtext {
-  text-align: left;
-  display: inline-block;
-  opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
-  animation-delay: 1s;
-}
-
-/* Typing animation */
+/* Typing text */
 .typing {
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid white;
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   width: 0;
-  animation: typing 3s steps(25, end) forwards, blink 0.7s infinite;
+  animation: typing 3s steps(25, end) forwards;
 }
 
-/* Typing effect */
+/* After typing → blinking only */
+.typing.finished {
+  animation: blink 0.7s infinite;
+}
+
+/* Typing animation */
 @keyframes typing {
   from { width: 0 }
   to { width: 28ch }
@@ -60,7 +49,25 @@ h1 {
   50% { border-color: transparent }
 }
 
-/* Fade-in animation */
+/* Subtext */
+.subtext {
+  text-align: left;
+  display: inline-block;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 1s;
+}
+
+/* Curly text */
+.subtext p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  color: white;
+  margin: 4px 0;
+}
+
+/* Fade in */
 @keyframes fadeIn {
   from {
     opacity: 0;

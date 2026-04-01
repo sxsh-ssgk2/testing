@@ -1,17 +1,23 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-    <title>Welcome to My World~</title> 
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> 
-</head> 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to My World~</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
   <div class="container">
-   <h1 class="typing">Hello Sash, welcome~</h1>
+    <h1 class="typing">Hello Sash, welcome~</h1>
     <div class="subtext">
       <p>This is a website created just for you!</p>
       <p>We're just getting started tehe~</p>
     </div>
   </div>
+  <script>
+    const text = document.querySelector(".typing");
+    text.addEventListener("animationend", () => {
+      text.classList.add("finished");
+    });
+  </script>
 </body>
-</html> 
+</html>
